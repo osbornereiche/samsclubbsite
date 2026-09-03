@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign In — ClubSams Grocery</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/auth.css?v=1" />
+</head>
+<body class="auth-page">
+
+  <header class="auth-top">
+    <div class="wrap auth-top-inner">
+      <a class="auth-back" href="index.html">← Back to store</a>
+      <a href="index.html"><img src="img/logo.svg" alt="ClubSams Grocery" height="32" /></a>
+    </div>
+  </header>
+
+  <main class="auth-main" id="main">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <a href="index.html"><img src="img/logo.svg" alt="ClubSams Grocery" width="180" height="36" /></a>
+      </div>
+
+      <div class="auth-already" id="auth-already" hidden>
+        <h1>You're signed in</h1>
+        <p>You already have an active session.</p>
+        <div class="auth-already-actions">
+          <a class="btn btn-primary" href="index.html">Continue Shopping</a>
+          <button class="btn btn-outline" type="button" data-force-logout>Sign Out</button>
+        </div>
+      </div>
+
+      <form class="auth-form" id="login-form" novalidate>
+        <h1>Sign in to your account</h1>
+        <p class="auth-lead">Enter your email and password to access member prices and your cart.</p>
+
+        <div class="field">
+          <label for="login-email">Email <span class="req">*</span></label>
+          <input id="login-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+          <p class="field-error" id="email-error" role="alert" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="login-password">Password <span class="req">*</span></label>
+          <div class="password-wrap">
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required minlength="6" placeholder="Your password" />
+            <button class="password-toggle" type="button" data-password-toggle aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+          <p class="field-error" id="password-error" role="alert" hidden></p>
+        </div>
+
+        <div class="auth-row">
+          <label><input type="checkbox" name="remember" checked /> Remember me</label>
+          <a class="auth-link" href="index.html#contacto">Forgot password?</a>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-full" type="submit">Sign In</button>
+      </form>
+
+      <p class="auth-footer-note">
+        Not a member yet? <a class="auth-link" href="index.html#membresia">Join ClubSams — from $45/yr</a>
+      </p>
+      <p class="auth-footer-note" style="margin-top:0.5rem;font-size:0.78rem;">
+        By signing in you agree to our
+        <a class="auth-link" href="terminos-y-condiciones.html">Terms</a> and
+        <a class="auth-link" href="politica-privacidad.html">Privacy Policy</a>.
+      </p>
+    </div>
+  </main>
+
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
